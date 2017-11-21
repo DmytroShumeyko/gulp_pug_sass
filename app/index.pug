@@ -1,0 +1,36 @@
+include components/head/head
+include components/header/header
+include components/section_1/section_1
+include components/section_2/section_2
+include components/title/title
+include components/btn/btn
+include components/nav/nav
+include components/footer/footer
+
+doctype html
+html(lang="en")
+
+    block head
+        head
+            +head({
+                "title": "Landing Page",
+                "author": "Dmytro Shumeyko",
+                "description": "Landing Page"
+            })
+
+        body.page
+            block header
+                +header
+
+            block content
+                +section_1()
+                +section_2()
+
+            block footer
+                +footer
+
+            block scripts
+                // build:js js/main.js
+                script( src="js/vendor.js")
+                script( src="js/main.js")
+                // endbuild

@@ -1,0 +1,36 @@
+mixin header()
+  header.header
+    .header__container header here
+      +nav({
+          "menu": [
+              {
+                  "text": "our story",
+                  "href": "#story"
+              },
+              {
+                  "text": "servises",
+                  "href": "#servises"
+              },
+              {
+                  "text": "work",
+                  "href": "#work"
+              },
+              {
+                  "text": "journal",
+                  "href": "#journal"
+              },
+              {
+                  "text": "contact",
+                  "href": "#contact"
+              }
+          ]
+      })
+      +btn({
+          "text": "button",
+          "href": "#",
+          "height": 40,
+          "width": 100
+      })
+  .preloader(id='preloader')
+    .spinner(id='spinner')
+  a.scrollToTop(src='#') Top

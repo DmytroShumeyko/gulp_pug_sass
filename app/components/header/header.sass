@@ -1,0 +1,68 @@
+.header
+  &__container
+    +container()
+    +col(12)
+.spinner
+  display: block
+  position: fixed
+  left: 50%
+  top: 50%
+  width: 100px
+  height: 100px
+  margin-top: $spinner-margin-top
+  margin-left: $spinner-margin-left
+  border: 3px solid transparent
+  border-top-color: #3498db
+  border-radius: 50%
+  z-index: 1001
+  animation: spin 1.5s linear infinite
+  &:before, &:after
+    content: ''
+    position: absolute
+    border-radius: 50%
+  &:before
+    top: 5px
+    left: 5px
+    right: 5px
+    bottom: 5px
+    border: 3px solid transparent
+    border-top-color: #e74c3c
+    animation: spin 2s linear infinite
+  &:after
+    top: 15px
+    left: 15px
+    right: 15px
+    bottom: 15px
+    border: 3px solid transparent
+    border-top-color: #f9c922
+    animation: spin 1s linear infinite
+
+@keyframes spin
+  0%
+    transform: rotate(0)
+  100%
+    transform: rotate(360deg)
+
+.preloader
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 1000
+  opacity: 0.9
+  background-color: #fff
+
+.scrollToTop
+  padding: 10px
+  text-align: center
+  background: rgba($btn_color, 0.2)
+  font-weight: bold
+  color: #444
+  text-decoration: none
+  position: fixed
+  bottom: 40px
+  right: 40px
+  display: none
+  z-index: 101
+  cursor: pointer
